@@ -1,0 +1,251 @@
+.titleStyle2 {
+    margin-top: 0%;
+    font-size: 250%;
+    color: #FDFDFD;
+    text-shadow: 2px 2px 2px #222;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.titleDivStyle2 {
+    background-color: #F9CC88;
+    width: 17%; 
+    margin-left: auto; 
+    margin-right: auto;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding-bottom: 0.4%;
+}
+
+.filterStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 180%;
+    text-align: center;
+}
+
+.filterRelativeStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+.filterTextStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.serviceTextStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 230%;
+    text-align: center;
+}
+
+.doughnutGraphStyle {
+    width: 30%;
+    height: 40%;
+    margin-top: 3%;  
+    text-align: center;
+    margin-bottom: 3%;
+    margin-left: 35%;
+}
+
+.barGraphStyle {
+    width: 50%;
+    height: 40%;
+    margin-top: 5%;  
+    text-align: center;
+    margin-bottom: 3%;
+    margin-left: 25%;
+}
+
+.graphDivStyleCharts {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-right: 30%;
+}
+
+.hrStyle {
+    border: 1.5px solid grey;
+}
+
+.linkReturnStyle {
+    color: #F9CC88;
+    background-color: #fdfdfd;
+    border-radius: 50px;
+    text-align: left;
+    font-size: 130%;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5%;
+    margin-left: 78%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    font-family: 'Arial Narrow Bold';
+}
+
+a:hover { 
+    color: orange;
+}
+
+.s3DivStyle {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+.s3FilterHeadingStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 170%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.filterHeadingStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 150%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.selectedS3FilterNameStyle {
+    color: #F9CC88;
+    background-color: #FDFDFD;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%;
+    width: 11%;
+    text-align: center;
+}
+
+.selectedS3FilterValueStyle {
+    color: #F9CC88;
+    background-color: #FDFDFD;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%;
+    justify-content: flex;
+    text-align: center;
+    width: 7%;
+}
+
+.predictedS3FilterNameStyle {
+    color: #FDFDFD;
+    background-color: #F9CC88;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%;
+    width: 11%;
+    text-align: center;
+}
+
+.predictedS3FilterValueStyle {
+    color: #FDFDFD;
+    background-color: #F9CC88;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%;
+    text-align: center;
+    width: 7%;
+}
+
+.aboutS3DivStyle {
+    background-color: #FDFDFD;
+    border-radius: 50px;
+    padding: 4%;
+    width: 80%;
+    margin-bottom: 3%;
+    margin-left: 6.7%;
+    background: rgba(255,255,255,0.7);
+}
+
+.aboutS3TextStyle {
+    color: #696969;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+.instanceNameStyle {
+    color: #FDFDFD;
+    background-color: #F9CC88;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%;
+    width: 18%;
+    text-align: center;
+}
+
+.instanceValueStyle {
+    color: #F9CC88;
+    background-color: #FDFDFD;
+    border-radius: 50px;
+    padding: 0.7%;
+    margin-right: 2%;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: 'Arial Narrow Bold';
+    font-weight: bold;
+    font-size: 130%;
+    margin-bottom: 0.7%; 
+    text-align: center;
+    width: 7%;
+}
