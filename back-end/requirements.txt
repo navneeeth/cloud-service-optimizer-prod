@@ -1,0 +1,13 @@
+flask
+pandas
+gunicorn
+flask-mysql
+scipy
+mysql-connector-python
+flask-cors
+scikit-learn
+numpy
+uwsgidecorators
+tasks
+uwsgi
+uwsgi-tasks
