@@ -764,10 +764,10 @@ class Dashboard extends Component {
         frontendData = JSON.stringify(frontendData);
         console.log("FrontEndData", frontendData);
 
-        this.getResults(frontendData, 3, 3000)
+        this.getResults(frontendData, 3, 3, 3000)
     }
 
-    getResults(frontendData, retries, backoff) {
+    getResults(frontendData, retriesPost, retriesGet, backoff) {
 
         const postDataUrl = "https://cloud-service-optimizer-dev.herokuapp.com/front-end/post-process-filters/";
         const getDataUrl = "https://cloud-service-optimizer-dev.herokuapp.com/front-end/get-results?processingNumber=";
@@ -803,8 +803,8 @@ class Dashboard extends Component {
                 })
                 .catch(error => { 
                     console.log(error);
-                    if(retries > 0) {
-                        var retriesLeft = retries - 1;
+                    if(retriesGet > 0) {
+                        var retriesLeft = retriesGet - 1;
                         console.log("Failure in GET, no. of retries left:", retriesLeft);
                         this.getResults(frontendData, retriesLeft, backoff + 500);
                     }
@@ -817,8 +817,8 @@ class Dashboard extends Component {
         })
         .catch(error => { 
             console.log(error);
-            if(retries > 0) {
-                var retriesLeft = retries - 1;
+            if(retriesPost > 0) {
+                var retriesLeft = retriesPost - 1;
                 console.log("Failure in POST, no. of retries left:", retriesLeft);
                 this.getResults(frontendData, retriesLeft, backoff + 500);
             }
