@@ -13,7 +13,7 @@ fileName = 'data/Log_11052021.csv'
 path = './../../bigLogsDir/'
 endpointID = 2
 separator = '/'
-url = 'http://127.0.0.1:5000/'
+url = 'https://cloud-service-optimizer-back.herokuapp.com/'
 
 def attemptLogin(eID, pwd):
     headersPost = {'Content-type': 'application/json'}
