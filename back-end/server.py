@@ -343,7 +343,19 @@ def saveLogData(sessionID, endpointID, instanceType, serviceType, elapsed, laten
 
 @app.route('/', methods = ['GET'])
 def hello():
-    return "Hello! Welcome to the server of Cloud Service Optimizer"
+    return "Hello! Welcome to the server of Cloud Service Optimizer!"
+
+@app.route('/test-route/', methods = ['POST'])
+def test_method():
+    param1 = request.args.get("p1")
+    param2 = request.args.get("p2")
+    print(param1)
+    print(param2)
+    value = jsonify({
+    "status": "success",
+    "params": str(param1) + " and " + str(param2)
+    })
+    return value
 
 @app.route('/front-end/get-content/', methods=['GET', 'OPTIONS'])
 def front_end_get_content():

@@ -2,9 +2,10 @@ import mysql.connector
 import ahp
 import time
 from itertools import combinations
+from credentials import host, database_name, username, password, port, auth_plugin
 
-db =mysql.connector.connect(host='db-mysql-blr1-22358-do-user-9282953-0.b.db.ondigitalocean.com',
-database='defaultdb', user='doadmin', password='', port='25060', auth_plugin='mysql_native_password')
+db =mysql.connector.connect(host=host,
+database=database_name, user=username, password=password, port=port, auth_plugin=auth_plugin)
 mycursor = db.cursor()
 
 def dbInsert(statement, data):

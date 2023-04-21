@@ -10,10 +10,10 @@ import requests
 import datetime
 import time
 fileName = 'data/Log_11052021.csv'
-path = './../bigLogsDir/'
+path = './../../bigLogsDir/'
 endpointID = 2
 separator = '/'
-url = 'http://cloud-service-optimizer-dev.herokuapp.com/'
+url = 'http://127.0.0.1:5000/'
 
 def attemptLogin(eID, pwd):
     headersPost = {'Content-type': 'application/json'}
@@ -71,7 +71,7 @@ while(loginFailure):
                 enteredPath = input('Enter the path where the logs are stored:')
                 separatorValid = '/'
                 if(separatorCheck == '1'):
-                    separatorValid = '\\'  
+                    separatorValid = '\\'
                 if(not enteredPath[-1] == separatorValid):
                     enteredPath = enteredPath + separator
                 if(os.path.isdir(enteredPath)):
@@ -124,7 +124,7 @@ while(loginFailure):
                 if(os.path.isdir(enteredPath)):
                     pathFailure = 0
                 else:
-                    print('The entered directory does not exist. Please try again.') 
+                    print('The entered directory does not exist. Please try again.')
             loginFailure = 0
         else:
             print("Invalid credentials. Try again.")
@@ -174,7 +174,7 @@ def uploadLogFile(isPerformanceIncluded, performanceJSON, logsJSON, summaryJSON,
 
 def getElapsed(df):
     return df.mean()
-    
+
 def getLatency(df):
     return df.mean()
 
@@ -190,7 +190,7 @@ def readLogFile(filePath):
     return(elapsed, latency, connect)
     json_str = df.to_json()
     return json_str
-    
+
 def readSummaryFile(filePath):
     df = pd.read_csv(filePath, usecols = ['Label', '# Samples', 'Average', 'Min', 'Max', 'Std. Dev.', 'Error %', 'Throughput', 'Received KB/sec', 'Sent KB/sec', 'Avg. Bytes'])
     df = df.iloc[0]
@@ -209,17 +209,17 @@ def readPerformanceFile(filePath):
     cpu = df["CPU"].mean()
     memory = df["Memory"].mean()
     return (cpu, memory, sizeOfFile)
-    
+
 def updateFilesListInServer(filesList, endpointID, sessionID):
     headersPost = {'Content-type': 'application/json'}
     postData = { "sessionID": sessionID, "endpointID": endpointID, "filesString": filesList}
     postData = json.dumps(postData)
     response = requests.post(url+'endpoints/update-files/', data = postData, headers=headersPost)
 
-    
-filesList = filesInServer 
 
-flag = 0 
+filesList = filesInServer
+
+flag = 0
 print('Going through files...')
 for serviceType in os.listdir(path):
     if os.path.isdir(path+serviceType) and (serviceType == 'ec2' or serviceType == 'rds'):
